@@ -6,10 +6,10 @@ import HeaderElement from './Component/Header';
 import MainElement from "./Component/Main";
 import FooterElement from './Component/Footer';
 import MetamaskElement from "./Component/Metamask";
-import ImportJs from './Component/ImportJs';
+// import ImportJs from './Component/ImportJs';
 
 function App() {
-  const [init, setInit] = useState(0);
+  const [init] = useState(0);
   const [metamask, setMetamask] = useState(0);
 
   $("#btn_primary_wallet").on("click", () => {

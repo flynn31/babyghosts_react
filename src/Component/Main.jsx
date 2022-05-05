@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ReactDom from "react-dom";
+import React from 'react';
+// import ReactDom from "react-dom";
 import Slider from "react-slick";
 import FadeInOut from "./FadeInOut";
 import DropdownItem from "./DropdownItem";
@@ -9,7 +9,7 @@ import bannerGhost1 from "../assets/images/banner-ghost1.png";
 import bannerGhost2 from "../assets/images/banner-ghost2.png";
 import bannerGhost3 from "../assets/images/banner-ghost3.png";
 
-import bg1 from "../assets/images/bg1.png";
+// import bg1 from "../assets/images/bg1.png";
 import bg2 from "../assets/images/bg2.png";
 import bg3 from "../assets/images/bg3.png";
 import bg4 from "../assets/images/bg4.png";

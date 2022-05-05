@@ -58,7 +58,7 @@ const Metamask_element = (props) => {
                     <div className="metamask-restore">
                         <button className="metamask-button" type="button">Recovery</button>
                     </div>
-                    <div className="metamask-help">Need help? Contact <a href="https://support.metamask.io" target="_blank">MetaMask Support</a></div>
+                    <div className="metamask-help">Need help? Contact <a href="https://support.metamask.io" >MetaMask Support</a></div>
                 </div>
             </div>
             <div className="metamask-content">

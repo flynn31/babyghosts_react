@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { Collapse } from "react-collapse";
 
 import { css } from "@emotion/css";
