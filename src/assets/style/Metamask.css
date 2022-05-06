@@ -52,7 +52,7 @@
 }
 
 .metamask-login {
-    display: none;
+    /* display: none; */
 }
 
 .metamask-head {
@@ -139,7 +139,7 @@
 }
 
 .metamask-input span {
-    display: none;
+    /* display: none; */
     margin: 3px 0 0;
     font-size: 12px;
     line-height: 20px;
@@ -213,13 +213,13 @@
 }
 
 .metamask-restore {
-    display: none;
+    /* display: none; */
     padding: 56px 0 0;
 }
 
 .metamask-content {
     padding: 30px;
-    display: none;
+    /* display: none; */
     overflow-y: auto;
     background: #fff;
 }

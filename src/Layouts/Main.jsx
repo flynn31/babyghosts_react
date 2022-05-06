@@ -1,15 +1,11 @@
-import React from 'react';
-// import ReactDom from "react-dom";
+import React, { useState } from 'react';
 import Slider from "react-slick";
-import FadeInOut from "./FadeInOut";
-import DropdownItem from "./DropdownItem";
-// import "../assets/Common.css";
-// import "../assets/Main.css";
+import FadeInOut from "../Component/FadeInOut";
+import DropdownItem from "../Component/DropdownItem";
+import MetamaskElement from "../Component/Metamask";
 import bannerGhost1 from "../assets/images/banner-ghost1.png";
 import bannerGhost2 from "../assets/images/banner-ghost2.png";
 import bannerGhost3 from "../assets/images/banner-ghost3.png";
-
-// import bg1 from "../assets/images/bg1.png";
 import bg2 from "../assets/images/bg2.png";
 import bg3 from "../assets/images/bg3.png";
 import bg4 from "../assets/images/bg4.png";
@@ -17,12 +13,10 @@ import bg8 from "../assets/images/bg8.jpg";
 import bg9 from "../assets/images/bg9.png";
 import bg11 from "../assets/images/bg11.png";
 import bg13 from "../assets/images/bg13.png";
-
 import postImg2 from "../assets/images/post-img2.png";
 import postImg5 from "../assets/images/post-img5.png";
 import postImg1 from "../assets/images/post-img6@2x.png";
 import postImg3 from "../assets/images/post-img4@2x.png";
-
 import imageGhost from "../assets/images/img-ghost.png";
 import image1sm from "../assets/images/image1-sm@2x.png";
 import img2 from "../assets/images/img2.png";
@@ -32,7 +26,6 @@ import img5 from "../assets/images/img05.png";
 import img6 from "../assets/images/img6.png";
 import img7 from "../assets/images/img7.png";
 import img8 from "../assets/images/img8.png";
-
 import slide1 from "../assets/images/slide1.jpg";
 import slide2 from "../assets/images/slide2.jpg";
 import slide3 from "../assets/images/slide3.jpg";
@@ -44,11 +37,7 @@ import slide8 from "../assets/images/slide8.jpg";
 import slide9 from "../assets/images/slide9.jpg";
 import slide10 from "../assets/images/slide10.jpg";
 import slide11 from "../assets/images/slide11.jpg";
-
 const Main_element = (props) => {
-	// const [OneCount, setOneCount] = useState(0);
-	// setOneCount(OneCount + 1);
-	// console.log(OneCount);
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -74,6 +63,15 @@ const Main_element = (props) => {
 		arrows: true,
 		cssEase: "linear"
 	};
+
+	const [metamask, setMetamask] = useState(0);
+
+	const connect_wallet = () => {
+		setMetamask(metamask + 1);
+	};
+
+	const metamask_ele = () => { return metamask > 0 ? <MetamaskElement data={metamask} /> : '' }
+
 	return (
 		<main id="main">
 			<section className="banner viewport-section" id="section1">
@@ -99,7 +97,7 @@ const Main_element = (props) => {
 					</FadeInOut>
 					<div id="midt">
 						<div className="form">
-							<button className='btn-primary' id="btn_primary_wallet">CONNECT_WALLET</button>
+							<button className='btn-primary' id="btn_primary_wallet" onClick={connect_wallet}>CONNECT_WALLET</button>
 							<span className="form-txt">
 								<span className='form-text-9304'>9304</span>
 								/ 10,000 MINTED</span>
@@ -260,7 +258,7 @@ const Main_element = (props) => {
 										<img src={img2} alt="" />
 									</div>
 								</div>
-								<div class="text"><span class="sub-title yellow">1% chances drop</span>
+								<div className="text"><span className="sub-title yellow">1% chances drop</span>
 									<h2>Hallowed</h2>
 									<p>The most festive tier, these Baby Ghosts put the spirit in Halloween! Celebrate the day of the dead
 										all year long.</p>
@@ -275,7 +273,7 @@ const Main_element = (props) => {
 										<img src={img3} alt="" />
 									</div>
 								</div>
-								<div class="text"><span class="sub-title">66% chances drop</span>
+								<div className="text"><span className="sub-title">66% chances drop</span>
 									<h2>Chilling</h2>
 									<p>The most common tier of Baby Ghost, but there just aren't enough of them to go around! They won't
 										pale in comparison.</p>
@@ -290,7 +288,7 @@ const Main_element = (props) => {
 										<img src={img4} alt="" />
 									</div>
 								</div>
-								<div class="text"><span class="sub-title blue">20% chances drop</span>
+								<div className="text"><span className="sub-title blue">20% chances drop</span>
 									<h2>Freaky</h2>
 									<p>A step-up in value from their chilling counterpart, freaky Baby Ghosts are ready to make a fuss.
 									</p>
@@ -305,7 +303,7 @@ const Main_element = (props) => {
 										<img src={img5} alt="" />
 									</div>
 								</div>
-								<div class="text"><span class="sub-title green">13% chances drop</span>
+								<div className="text"><span className="sub-title green">13% chances drop</span>
 									<h2>Ethereal</h2>
 									<p>Starting at this tier, Baby ghosts go beyond with premium traits combinations. These Baby Ghosts
 										are to die for.</p>
@@ -508,7 +506,9 @@ const Main_element = (props) => {
 					</div>
 				</div>
 			</section>
+			{metamask_ele()}
 		</main >
+
 	)
 }
 export default Main_element;

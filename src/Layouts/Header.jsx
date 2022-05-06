@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
-// import "../assets/Common.css";
-import "../assets/Main.css";
+import React from 'react';
+import "../assets/style/Main.css";
 import logo from "../assets/images/logo.png";
 import opensea from "../assets/fonts/opensea.svg";
 import discord from "../assets/fonts/discord.svg";
 import twitter from "../assets/fonts/twitter.svg";
-// import $ from "jquery";
-
-const Header_element = (props) => {
-    const [headerV] = useState(0);
-    console.log(headerV + props);
-
+const Header_element = () => {
     return (
         <header id="header">
             <div className="container">
